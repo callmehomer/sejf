@@ -7,16 +7,24 @@ class Sejf {
     public $lock = 'double lock';
 
     private $isLocked = true;
-    private $isOpened = true;
 
-    protected $password = '123456';
+    protected $password = '1';
     protected $content = [
-        'Alex' => '415-235-789',
+        'Sabina' => '415-235-789',
         'Jessica' => '147-852-852',
     ];
 
     public function checkIsLocked(){
         return $this -> isLocked;
+    }
+
+    public function getPassword(){
+        return $this -> password;
+    }
+
+    public function unlock(){
+        $isLocked = false;
+        return $isLocked;
     }
 }
 ?>

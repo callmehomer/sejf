@@ -9,11 +9,13 @@
 </head>
 <body>
 <div class="container text-center">
-
+    <nav class="nav">
+        <a href="wyloguj">zamknij sejf</a>
+    </nav>
     <?php
     $sejf = new Sejf();
-    $isLocked = $sejf->checkIsLocked();
-   
+    $isLocked = $sejf->unlock();
+
     if($isLocked == true){
         $isLocked = "Zablokowany";
     }else{
@@ -23,13 +25,9 @@
     echo "Sejf jest $isLocked <br /><br />";
     ?>
 
-    <form action="login.php" method="post">
-        <label>wpisz hasło do sejfu</label></br>
-        <input type="password" name="password" placeholder="Hasło"><br>    
-        </br>
-        <input type="submit" value="otwórz sejf">
-    </form>
-    </div>
+    
+
+</div>
 
 </body>
 </html>
