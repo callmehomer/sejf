@@ -10,12 +10,13 @@
 <body>
 <div class="container text-center">
     <nav class="nav">
-        <a href="wyloguj">zamknij sejf</a>
+        <a href="#" onclick="close();">zamknij sejf</a>
     </nav>
+
     <?php
     $sejf = new Sejf();
     $isLocked = $sejf->unlock();
-
+    $content = $sejf -> getContent();
     if($isLocked == true){
         $isLocked = "Zablokowany";
     }else{
@@ -23,9 +24,10 @@
     }
     
     echo "Sejf jest $isLocked <br /><br />";
-    ?>
+    echo $content["Sabina"];
 
-    
+   
+    ?>
 
 </div>
 

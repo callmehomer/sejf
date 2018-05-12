@@ -26,5 +26,14 @@ class Sejf {
         $isLocked = false;
         return $isLocked;
     }
+
+    public function getContent(){
+        return $this -> content;
+    }
+    public function lock(){
+        $isLocked = true;
+        header('Location: index.php');
+        return $isLocked;
+    }
 }
 ?>
