@@ -10,7 +10,9 @@
 <body>
 <div class="container text-center">
     <nav class="nav">
-        <a href="#" onclick="close();">zamknij sejf</a>
+    <form action="close.php" method="post">
+        <input type="submit" value="zamknij sejf" /><br/>
+    </form>
     </nav>
 
     <?php
@@ -21,13 +23,15 @@
         $isLocked = "Zablokowany";
     }else{
         $isLocked = "Otwarty";
+        echo "Sejf jest $isLocked <br /><br />";
+        echo $content;
     }
-    
-    echo "Sejf jest $isLocked <br /><br />";
-    echo $content["Sabina"];
-
-   
     ?>
+    <form action="update_secret.php" method="post">
+        <label>Zmień sekret</label>
+        <input type="text" name="newsecret">
+        <input type="submit" value="nowy sekret" /><br/>
+    </form>
 
 </div>
 

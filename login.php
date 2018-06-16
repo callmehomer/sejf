@@ -1,7 +1,6 @@
 <?php include 'sejf.php';
 
 $sejf = new Sejf();
-$i=0;
 
 if($_POST["password"] == $sejf->getPassword()){
  

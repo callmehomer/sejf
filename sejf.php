@@ -3,16 +3,12 @@
 class Sejf {
     public $brand = 'Tajniaki';
     public $model = 'Tajniaki 2.0';
-    public $material = ['tytan', 'stal'];
     public $lock = 'double lock';
 
     private $isLocked = true;
 
-    protected $password = '1';
-    protected $content = [
-        'Sabina' => '415-235-789',
-        'Jessica' => '147-852-852',
-    ];
+    protected $password = '123';
+    protected $content = "super tajny content";
 
     public function checkIsLocked(){
         return $this -> isLocked;
@@ -30,6 +26,12 @@ class Sejf {
     public function getContent(){
         return $this -> content;
     }
+
+    public function setContent($newContent){
+        $this -> content = $newContent;
+    }
+
+
     public function lock(){
         $isLocked = true;
         header('Location: index.php');
